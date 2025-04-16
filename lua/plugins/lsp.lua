@@ -7,7 +7,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "pyright" },
+        ensure_installed = { "lua_ls", "ts_ls", "pyright", "clangd" },
         automatic_installation = true,
       })
 
@@ -42,7 +42,13 @@ return {
         capabilities = capabilities,
         on_attach    = on_attach,
       })
+
       lspconfig.pyright.setup({
+        capabilities = capabilities,
+        on_attach    = on_attach,
+      })
+
+      lspconfig.clangd.setup({
         capabilities = capabilities,
         on_attach    = on_attach,
       })
