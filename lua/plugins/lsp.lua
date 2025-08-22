@@ -53,6 +53,7 @@ return {
         on_attach    = on_attach,
       })
 
+
       vim.diagnostic.config({
         virtual_text     = {
           prefix  = "",
